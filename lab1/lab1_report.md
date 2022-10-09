@@ -12,20 +12,10 @@ Date of finished: 31.09.2022
 
 ## Ход работы:
 
-# Создаем манифест пода:
-
-apiVersion: v1
-kind: Pod
-metadata:
-  name: vault
-  labels:
-    name: vault
-spec:
-  containers:
-  - name: vault
-    image: vault:1.9.10
-    ports:
-    - containerPort: 8200
+# Создаем манифест пода
+1. Добавляем образ vault
+2. Добавляем labels name: vault
+3. Создаем под
 
 Command: kubectl apply -f vault-pod.yaml
 
