@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: depl
+  labels:
+    app: front-depl
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        ports:
+        - containerPort: 3000
+        env:
+          - name: REACT_APP_USERNAME
+            value: Semen
+          - name: REACT_APP_COMPANY_NAME
+            value: Itmo
+        

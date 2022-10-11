@@ -6,7 +6,7 @@ Group: K4110c
 Author: Antufiev Semen Viktorovich
 Lab: Lab1
 Date of create: 09.10.2022
-Date of finished: 31.09.2022
+Date of finished:
 
 ![image](https://user-images.githubusercontent.com/55154894/194776796-2954bb87-ad9d-4d1c-b404-bc283afc4f78.png)
 
