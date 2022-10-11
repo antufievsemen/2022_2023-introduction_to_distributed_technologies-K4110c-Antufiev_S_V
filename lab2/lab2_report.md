@@ -15,11 +15,12 @@ Date of finished:
 2. В spec указываем selector: mathLabels: (указываем label, который мы будем использовать для сервиса)
 3. Создаем template, в котором мы указываем конфигурацию к pod
 4. Важно поставить containerPort: 3000. Так как приложение слушает именно этот порт, это видно из логов.
+![kuber_logspng](https://user-images.githubusercontent.com/55154894/195167104-e8da366b-0a6b-4168-be36-5a5a89d26cf4.png)
 
 Command: kubectl apply -f deployment.yaml
 
 # Логи pod'ов
-
+![kuber_logspng](https://user-images.githubusercontent.com/55154894/195167019-6d3ebfd1-5602-4f91-911d-646edd604310.png)
 
 # Создаем сервис
 
@@ -32,3 +33,8 @@ Command: kubectl apply -f front-service.yaml
 # Открываем порт для доступа к сервису
 
 Command: kubectl port-forward service/front-service 8888:8080
+
+# Результат
+![app](https://user-images.githubusercontent.com/55154894/195167150-da4ceec4-0c2a-4587-8410-9271f881d35c.png)
+
+![kuber](https://user-images.githubusercontent.com/55154894/195167225-52b074d4-dcf9-4e13-a4aa-8c4dcb592824.png)
