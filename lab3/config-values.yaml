@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: front-config
+data:
+  REACT_APP_USERNAME: Semen
+  REACT_APP_COMPANY_NAME: Itmo
