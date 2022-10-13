@@ -10,25 +10,33 @@ Date of finished:
 
 ## Ход работы:
 
-# Создаем манифест deployment
-1. В spec указываем количество replic = 2
-2. В spec указываем selector: mathLabels: (указываем label, который мы будем использовать для сервиса)
-3. Создаем template, в котором мы указываем конфигурацию к pod
-4. Важно поставить containerPort: 3000. Так как приложение слушает именно этот порт, это видно из логов.
+# Создаем манифест ingress-controller
+1. Важно указать nginx.ingress.kubernetes.io/rewrite-target: / для работы ingress
+2. Прописываем хост: его пути, с какими сервисами он общается и порты для обращения.
+3. Для работы с tls необходимо указать tls и имя секрета. Написать хосты, на которые будет распространяться наш tls.
+4. Важно в хостах добавь dns, по которому мы будет обращаться
 
-Command: kubectl apply -f deployment.yaml
+Command: kubectl apply -f ingress-front.yaml
 
-# Логи pod'ов
+# Создаем config map
+1. В config map указываем интересующие нас ключи и их значения
+2. В deployment указываем config map и указываем env variables, которые мы используем
 
+Command: kubectl apply -f config-values.yaml
 
-# Создаем сервис
+# Создание tls
 
-1. В spec указываем selector: (указываем label, сервис свяжет их все с собой)
-2. TargetPort указываем 3000.
-3. Указываем type: NodePort для связи с pod извне.
+Указанные данные:
+ *  emailAddress = alexantufiev@gmail.com
+ *  CN = front.example.com
+ *  OU = front-service
+ *  O = ITMO
+ *  L = SPB
+ *  ST = SPB
+ *  C = RU
 
-Command: kubectl apply -f front-service.yaml
+# Результат работы
 
-# Открываем порт для доступа к сервису
-
-Command: kubectl port-forward service/front-service 8888:8080
+![front-example-com-tls](https://user-images.githubusercontent.com/55154894/195681561-a776cc20-08ec-4ddd-978e-bd7423d50542.png)
+![k8s](https://user-images.githubusercontent.com/55154894/195681600-939bd8eb-96d1-46c2-a32e-06d2e37372f3.png)
+![configmappng](https://user-images.githubusercontent.com/55154894/195681612-2611db17-b82c-41f3-863e-478b44790669.png)
