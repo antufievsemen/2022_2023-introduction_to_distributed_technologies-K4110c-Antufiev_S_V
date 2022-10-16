@@ -5,7 +5,7 @@ Year: 2022/2023
 Group: K4110c
 Author: Antufiev Semen Viktorovich
 Lab: Lab2
-Date of create: 11.10.2022
+Date of create: 12.10.2022
 Date of finished: 
 
 ## Ход работы:
