@@ -9,7 +9,6 @@ Date of create: 09.10.2022
 Date of finished:
 
 
-
 ## Ход работы:
 
 # Создаем манифест пода 
@@ -28,3 +27,6 @@ Command: kubectl expose pod vault --type=NodePort --port=8200
 # Открываем порт для доступа к сервису
 
 Command: kubectl port-forward service/vault 8080:8200
+
+# Схема k8s:
+![schema_extended](https://user-images.githubusercontent.com/55154894/196978077-17dc81b3-d704-49e7-a7a0-085d38341b9d.png)
