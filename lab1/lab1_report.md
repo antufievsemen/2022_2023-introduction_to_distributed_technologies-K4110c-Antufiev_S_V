@@ -6,7 +6,7 @@ Group: K4110c
 Author: Antufiev Semen Viktorovich
 Lab: Lab1
 Date of create: 09.10.2022
-Date of finished:
+Date of finished: 20.10.2022 (15 points)
 
 
 ## Ход работы:
