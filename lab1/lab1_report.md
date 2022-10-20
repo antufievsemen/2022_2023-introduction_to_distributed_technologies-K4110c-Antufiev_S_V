@@ -29,6 +29,7 @@ Command: kubectl expose pod vault --type=NodePort --port=8200
 Command: kubectl port-forward service/vault 8080:8200
 
 # Схема k8s:
-![schema_extended](https://user-images.githubusercontent.com/55154894/196981670-011d2492-5baa-45fa-86a5-276040b1dede.png)
+![schema_extended](https://user-images.githubusercontent.com/55154894/197000068-19f1650d-94c7-4827-be0c-cb9b7bc1d8f8.png)
+
 
 
