@@ -17,6 +17,7 @@ Date of finished:
  * --nodes 2
 
 # Создаем манифест calico для ip pool
+[Manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab4/calico-ip.yaml)
 1. Я использовал пример с сайта https://projectcalico.docs.tigera.io/
 2. Указываем два ippool'а со значениями labels: zone=east и zone=west
 3. Выбираем для них ips 
