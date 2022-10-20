@@ -11,6 +11,7 @@ Date of finished:
 ## Ход работы:
 
 # Создаем манифест ingress-controller
+[Manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab3/ingress-front.yaml)
 1. Важно указать nginx.ingress.kubernetes.io/rewrite-target: / для работы ingress
 2. Прописываем хост: его пути, с какими сервисами он общается и порты для обращения.
 3. Для работы с tls необходимо указать tls и имя секрета. Написать хосты, на которые будет распространяться наш tls.
@@ -19,6 +20,7 @@ Date of finished:
 Command: kubectl apply -f ingress-front.yaml
 
 # Создаем config map
+[Manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab3/config-values.yaml)
 1. В config map указываем интересующие нас ключи и их значения
 2. В deployment указываем config map и указываем env variables, которые мы используем
 
@@ -40,3 +42,7 @@ Command: kubectl apply -f config-values.yaml
 ![front-example-com-tls](https://user-images.githubusercontent.com/55154894/195681561-a776cc20-08ec-4ddd-978e-bd7423d50542.png)
 ![k8s](https://user-images.githubusercontent.com/55154894/195681600-939bd8eb-96d1-46c2-a32e-06d2e37372f3.png)
 ![configmappng](https://user-images.githubusercontent.com/55154894/195681612-2611db17-b82c-41f3-863e-478b44790669.png)
+
+# Схема k8s
+![schema](https://user-images.githubusercontent.com/55154894/197009631-23963080-fe64-4e2a-b168-88682afc6784.png)
+
