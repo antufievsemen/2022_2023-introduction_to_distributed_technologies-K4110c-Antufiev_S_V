@@ -11,6 +11,7 @@ Date of finished:
 ## Ход работы:
 
 # Создаем манифест deployment
+[Manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab2/deployment.yaml)
 1. В spec указываем количество replic = 2
 2. В spec указываем selector: mathLabels: (указываем label, который мы будем использовать для сервиса)
 3. Создаем template, в котором мы указываем конфигурацию к pod
@@ -23,7 +24,7 @@ Command: kubectl apply -f deployment.yaml
 ![kuber_logspng](https://user-images.githubusercontent.com/55154894/195167019-6d3ebfd1-5602-4f91-911d-646edd604310.png)
 
 # Создаем сервис
-
+[Manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab2/service-front.yaml)
 1. В spec указываем selector: (указываем label, сервис свяжет их все с собой)
 2. TargetPort указываем 3000.
 3. Указываем type: NodePort для связи с pod извне.
@@ -38,3 +39,7 @@ Command: kubectl port-forward service/front-service 8888:8080
 ![app](https://user-images.githubusercontent.com/55154894/195167150-da4ceec4-0c2a-4587-8410-9271f881d35c.png)
 
 ![kuber](https://user-images.githubusercontent.com/55154894/195167225-52b074d4-dcf9-4e13-a4aa-8c4dcb592824.png)
+
+# Схема k8s
+![schema](https://user-images.githubusercontent.com/55154894/197008746-40a2336a-7822-4a75-8a00-9edf0b9134db.png)
+
