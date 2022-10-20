@@ -8,11 +8,13 @@ Lab: Lab1
 Date of create: 09.10.2022
 Date of finished:
 
-![image](https://user-images.githubusercontent.com/55154894/194776796-2954bb87-ad9d-4d1c-b404-bc283afc4f78.png)
+
 
 ## Ход работы:
 
-# Создаем манифест пода
+# Создаем манифест пода 
+Ссылка на [manifest](https://github.com/antufievsemen/2022_2023-introduction_to_distributed_technologies-K4110c-Antufiev_S_V/blob/main/lab1/vault-pod.yaml).
+
 1. Добавляем образ vault
 2. Добавляем labels name: vault
 3. Создаем под
