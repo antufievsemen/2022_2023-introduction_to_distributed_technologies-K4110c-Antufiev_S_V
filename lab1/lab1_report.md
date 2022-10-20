@@ -6,7 +6,7 @@ Group: K4110c
 Author: Antufiev Semen Viktorovich
 Lab: Lab1
 Date of create: 09.10.2022
-Date of finished:
+Date of finished: 20.10.2022 (15 points)
 
 
 ## Ход работы:
@@ -29,5 +29,6 @@ Command: kubectl expose pod vault --type=NodePort --port=8200
 Command: kubectl port-forward service/vault 8080:8200
 
 # Схема k8s:
-![schema_extended](https://user-images.githubusercontent.com/55154894/196978636-a5352143-0d1a-4cd4-b18b-2c1a027a6613.png)
+![schema_extended](https://user-images.githubusercontent.com/55154894/196981670-011d2492-5baa-45fa-86a5-276040b1dede.png)
+
 
